@@ -1,0 +1,767 @@
+/* ==========================================================================
+   ===== GAYA VISUAL BARU HALAMAN KONTAK (kontak.html) =====
+   ========================================================================== */
+
+.kontak-page-body {
+    background: #FAF8F6;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+}
+
+/* ===== INTRO SECTION ===== */
+.kontak-intro-section {
+    padding: 48px 0 24px;
+    background: transparent;
+}
+
+.kontak-intro-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.kontak-intro-title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--primary-dark);
+    margin-bottom: 12px;
+}
+
+.kontak-intro-desc {
+    font-size: 0.95rem;
+    color: var(--text-gray);
+    line-height: 1.6;
+    max-width: 640px;
+    margin-bottom: 24px;
+}
+
+.kontak-badges {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.kontak-badge-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: var(--white);
+    border: 1.5px solid #E5DFDA;
+    border-radius: 8px;
+    color: var(--text-dark);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    transition: all 0.2s;
+}
+
+.kontak-badge-item:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    box-shadow: 0 4px 12px rgba(139, 0, 0, 0.08);
+}
+
+.kontak-badge-item i {
+    font-size: 1rem;
+}
+
+.kontak-badge-item .fa-phone {
+    color: #A8761E; /* Gold/brown */
+}
+
+.kontak-badge-item .fa-whatsapp {
+    color: #25D366; /* Green */
+}
+
+/* ===== GRID SECTION ===== */
+.kontak-grid-section {
+    padding: 24px 0 48px;
+}
+
+.kontak-grid-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    gap: 32px;
+    align-items: stretch;
+}
+
+/* Kirim Pesan Form */
+.kontak-form-card {
+    flex: 1.5;
+    background: var(--white);
+    border-radius: 16px;
+    border: 1px solid #f0e9e2;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+    padding: 36px;
+}
+
+.form-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--primary-dark);
+    margin-bottom: 8px;
+}
+
+.form-subtitle {
+    font-size: 0.88rem;
+    color: var(--text-gray);
+    margin-bottom: 24px;
+}
+
+.form-input-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.form-group-kontak {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.form-group-kontak label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-gray);
+}
+
+.form-group-kontak input,
+.form-group-kontak textarea {
+    width: 100%;
+    padding: 12px 16px;
+    background: #FAF6F4;
+    border: 1.5px solid #E5DFDA;
+    border-radius: 8px;
+    outline: none;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    transition: all 0.2s;
+    font-family: inherit;
+}
+
+.form-group-kontak input:focus,
+.form-group-kontak textarea:focus {
+    border-color: var(--primary);
+    background: var(--white);
+    box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.06);
+}
+
+/* Select Dropdown */
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper select {
+    width: 100%;
+    padding: 12px 16px;
+    background: #FAF6F4;
+    border: 1.5px solid #E5DFDA;
+    border-radius: 8px;
+    outline: none;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: inherit;
+}
+
+.select-wrapper::after {
+    content: '\f078';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-gray);
+    font-size: 0.8rem;
+    pointer-events: none;
+}
+
+.btn-send-message {
+    background: var(--primary-dark);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-send-message:hover {
+    background: var(--primary);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(139, 0, 0, 0.2);
+}
+
+.btn-send-message i {
+    font-size: 0.8rem;
+}
+
+/* Sidebar Info */
+.kontak-sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-card {
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+}
+
+.scard-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ops-card {
+    background: #25221F;
+    color: #fff;
+    border: 1px solid #332d29;
+}
+
+.ops-card .scard-title {
+    color: var(--secondary);
+}
+
+.ops-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ops-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.88rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 8px;
+}
+
+.ops-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.ops-row span {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.ops-row strong {
+    font-weight: 700;
+}
+
+.branches-card {
+    background: #EAE5E1;
+    border: 1px solid #DFD9D3;
+    color: var(--text-dark);
+}
+
+.branches-card .scard-title {
+    color: var(--primary);
+}
+
+.branch-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.branch-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 12px;
+}
+
+.branch-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.branch-item h4 {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+}
+
+.branch-item p {
+    font-size: 0.78rem;
+    color: var(--text-gray);
+    line-height: 1.4;
+}
+
+/* ===== LOKASI KAMI SECTION ===== */
+.kontak-lokasi-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 32px;
+}
+
+.lokasi-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.lokasi-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--secondary);
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.lokasi-title {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--primary-dark);
+}
+
+.lokasi-btn-col {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn-location-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid #E5DFDA;
+    background: var(--white);
+    color: var(--text-dark);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: all 0.2s;
+}
+
+.btn-location-icon:hover {
+    background: #FAF8F6;
+    border-color: #ccc;
+}
+
+.btn-google-maps {
+    background: var(--primary-dark);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s;
+    display: inline-block;
+}
+
+.btn-google-maps:hover {
+    background: var(--primary);
+}
+
+.mockup-map-container {
+    width: 100%;
+    height: 380px;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e0dfdb;
+}
+
+.map-vector-bg {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.map-pin-point {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.pin-icon-inner {
+    width: 34px;
+    height: 34px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 0.85rem;
+    border: 2.5px solid var(--white);
+    box-shadow: 0 4px 12px rgba(139, 0, 0, 0.3);
+    animation: pinPulse 2s infinite ease-in-out;
+}
+
+@keyframes pinPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.map-card-overlay {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    background: var(--white);
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border: 1px solid #f0e9e2;
+}
+
+.mcard-header {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.mcard-icon {
+    width: 34px;
+    height: 34px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.mcard-title {
+    font-size: 0.88rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 2px;
+}
+
+.mcard-desc {
+    font-size: 0.75rem;
+    color: var(--text-gray);
+    line-height: 1.4;
+}
+
+.mcard-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.mcard-route-link {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.mcard-distance {
+    font-size: 0.75rem;
+    color: var(--text-gray);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* ===== CTA DELIVERY ===== */
+.delivery-cta-section {
+    background: var(--primary-dark);
+    padding: 48px;
+    max-width: 1200px;
+    margin: 40px auto;
+    border-radius: 16px;
+    border-bottom: 4px solid var(--secondary);
+}
+
+.delivery-cta-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.delivery-cta-left {
+    max-width: 600px;
+}
+
+.delivery-cta-left h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.delivery-cta-left p {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+.delivery-cta-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-delivery-wa {
+    background: #25D366;
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.88rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s;
+}
+
+.btn-delivery-wa:hover {
+    background: #1EBD5A;
+}
+
+.btn-delivery-menu {
+    background: var(--accent);
+    color: var(--primary-dark);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.88rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: opacity 0.2s;
+}
+
+.btn-delivery-menu:hover {
+    opacity: 0.9;
+}
+
+/* ===== FOOTER ===== */
+.kontak-footer {
+    background: #201C1A;
+    color: #aaa;
+    padding: 48px 0 0;
+    border-top: 3px solid var(--primary-dark);
+}
+
+.kfooter-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px 40px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 48px;
+    width: 100%;
+}
+
+.kfooter-col-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.kfooter-brand-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--white);
+}
+
+.kfooter-brand-desc {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #999;
+}
+
+.kfooter-social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.kfooter-social-icons a {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.kfooter-social-icons a:hover {
+    background: var(--secondary);
+    color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.kfooter-section-title {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--secondary);
+    margin-bottom: 16px;
+    letter-spacing: 0.8px;
+}
+
+.kfooter-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.kfooter-links-list li {
+    margin-bottom: 8px;
+}
+
+.kfooter-links-list a {
+    font-size: 0.85rem;
+    color: #999;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.kfooter-links-list a:hover {
+    color: var(--secondary);
+}
+
+.kfooter-col-subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.kfooter-sub-text {
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.kfooter-sub-form {
+    display: flex;
+}
+
+.kfooter-sub-form input {
+    flex: 1;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+    color: var(--white);
+    font-size: 0.85rem;
+    outline: none;
+}
+
+.kfooter-sub-form button {
+    background: var(--secondary);
+    color: var(--primary-dark);
+    font-weight: 700;
+    border: none;
+    padding: 0 16px;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.kfooter-sub-form button:hover {
+    opacity: 0.9;
+}
+
+.kfooter-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 20px 32px;
+    text-align: center;
+    font-size: 0.78rem;
+    color: #666;
+}
+
+/* ===== RESPONSIVE BARU ===== */
+@media (max-width: 900px) {
+    .kontak-grid-container {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .kontak-form-card,
+    .kontak-sidebar {
+        width: 100%;
+    }
+
+    .lokasi-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .delivery-cta-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .delivery-cta-buttons {
+        justify-content: center;
+    }
+
+    .kfooter-container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    .form-input-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .mockup-map-container {
+        height: 280px;
+    }
+
+    .map-card-overlay {
+        left: 12px;
+        bottom: 12px;
+        max-width: calc(100% - 24px);
+    }
+}

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hubungi Kami - RM Padang</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/kontak.css" />
+  <link rel="stylesheet" href="css/cart.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+
+<body class="kontak-page-body">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <img src="img/logo.png" alt="Logo" class="logo" />
+      <div>
+        <span class="brand-name">RM PADANG</span>
+        <span class="brand-sub">Rumah Makan Padang</span>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">BERANDA</a></li>
+      <li><a href="menu.html">MENU</a></li>
+      <li><a href="catering.html">CATERING</a></li>
+      <li><a href="reservasi.html">RESERVASI</a></li>
+      <li><a href="promosi.html">PROMOSI</a></li>
+      <li><a href="tentang-kami.html">TENTANG KAMI</a></li>
+      <li><a href="kontak.html" class="active">KONTAK</a></li>
+    </ul>
+    <a href="login.html" class="btn-login">Login</a>
+    <button class="nav-toggle" id="navToggle"><i class="fa fa-bars"></i></button>
+  </nav>
+
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="breadcrumb">
+    <a href="index.html"><i class="fa fa-home"></i></a>
+    <span class="sep">&rsaquo;</span>
+    <span>Kontak</span>
+  </div>
+
+  <!-- ===== INTRO SECTION ===== -->
+  <section class="kontak-intro-section">
+    <div class="kontak-intro-container">
+      <h1 class="kontak-intro-title">Hubungi Kami</h1>
+      <p class="kontak-intro-desc">
+        Punya pertanyaan tentang catering, reservasi meja, atau sekadar ingin memberikan masukan? Kami siap melayani
+        Anda dengan hangat khas Minang.
+      </p>
+      <div class="kontak-badges">
+        <a href="tel:+6281234567890" class="kontak-badge-item">
+          <i class="fa-solid fa-phone"></i> +62 812-3456-7890
+        </a>
+        <a href="https://wa.me/6281234567890" class="kontak-badge-item">
+          <i class="fa-brands fa-whatsapp"></i> +62 812 3456 7890
+        </a>
+        <a href="https://maps.app.goo.gl/tJoHpj8N56SnJppR9" target="_blank" class="kontak-badge-item">
+          <i class="fa-solid fa-location-dot"></i> Lihat Peta
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FORM & SIDEBAR SECTION ===== -->
+  <section class="kontak-grid-section">
+    <div class="kontak-grid-container">
+
+      <!-- KIRI: Form Kirim Pesan -->
+      <div class="kontak-form-card">
+        <h2 class="form-title">Kirim Pesan</h2>
+        <p class="form-subtitle">Isi formulir di bawah ini, tim kami akan segera menghubungi Anda.</p>
+
+        <form id="formKirimPesan" onsubmit="handleContactSubmit(event)">
+          <div class="form-input-row">
+            <div class="form-group-kontak">
+              <label for="namaLengkap">Nama Lengkap</label>
+              <input type="text" id="namaLengkap" placeholder="Masukkan nama Anda" required />
+            </div>
+            <div class="form-group-kontak">
+              <label for="emailWhatsApp">Email / WhatsApp</label>
+              <input type="text" id="emailWhatsApp" placeholder="Contoh: 0812..." required />
+            </div>
+          </div>
+
+          <div class="form-group-kontak">
+            <label for="subjekPesan">Subjek</label>
+            <div class="select-wrapper">
+              <select id="subjekPesan" required>
+                <option value="Tanya Menu">Tanya Menu</option>
+                <option value="Pesan Catering">Pesan Catering</option>
+                <option value="Reservasi Meja">Reservasi Meja</option>
+                <option value="Kritik & Saran">Kritik & Saran</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group-kontak">
+            <label for="isiPesan">Pesan Anda</label>
+            <textarea id="isiPesan" placeholder="Tuliskan pesan lengkap Anda di sini" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-send-message">
+            <i class="fa-solid fa-play"></i> Kirim Pesan Sekarang
+          </button>
+        </form>
+      </div>
+
+      <!-- KANAN: Sidebar Info -->
+      <div class="kontak-sidebar">
+
+        <!-- Jam Operasional Card -->
+        <div class="sidebar-card ops-card">
+          <h3 class="scard-title"><i class="fa-regular fa-clock"></i> Jam Operasional</h3>
+          <div class="ops-list">
+            <div class="ops-row">
+              <span>Senin - Jumat</span>
+              <strong>09.00 - 21.00</strong>
+            </div>
+            <div class="ops-row">
+              <span>Sabtu - Minggu</span>
+              <strong>09.00 - 22.00</strong>
+            </div>
+            <div class="ops-row">
+              <span>Hari Libur Nasional</span>
+              <strong>Tutup</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lokasi Kami Card -->
+        <div class="sidebar-card branches-card">
+          <h3 class="scard-title"><i class="fa-solid fa-map-location-dot"></i> Alamat Kami</h3>
+          <div class="branch-list">
+            <div class="branch-item">
+              <h4>RM Padang Pesona Kapau</h4>
+              <p>Jl. Magelang - Yogyakarta, Jl. Tangkilan No.16, Tangkilan, Tamanagung, Kec. Muntilan, Kabupaten
+                Magelang, Jawa Tengah 56413</p>
+            </div>
+            <div class="branch-item">
+              <h4>Jam Buka</h4>
+              <p>Senin–Jumat: 09.00–21.00<br />Sabtu–Minggu: 09.00–22.00<br />Libur Nasional: Tutup</p>
+            </div>
+            <div class="branch-item">
+              <a href="https://maps.app.goo.gl/tJoHpj8N56SnJppR9" target="_blank"
+                style="color: var(--primary); font-weight: 700; font-size: 0.85rem; display: flex; align-items: center; gap: 6px;">
+                <i class="fa-solid fa-diamond-turn-right"></i> Buka di Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== LOKASI KAMI ===== -->
+  <section class="kontak-lokasi-section">
+    <div class="lokasi-header-row">
+      <div class="lokasi-title-col">
+        <span class="lokasi-label">LOKASI KAMI</span>
+        <h2 class="lokasi-title">Kunjungi Restoran Kami</h2>
+      </div>
+      <div class="lokasi-btn-col">
+        <button class="btn-location-icon"><i class="fa-solid fa-compass"></i></button>
+        <a href="https://maps.app.goo.gl/tJoHpj8N56SnJppR9" target="_blank" class="btn-google-maps">
+          Buka di Google Maps
+        </a>
+      </div>
+    </div>
+
+    <!-- REAL GOOGLE MAPS EMBED -->
+    <div class="mockup-map-container">
+
+      <!-- Google Maps Iframe -->
+      <iframe
+        src="https://maps.google.com/maps?q=-7.572514236695586,110.2610189865628&t=&z=19&ie=UTF8&iwloc=&output=embed"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      <!-- Card Info Overlay -->
+      <div class="map-card-overlay">
+        <div class="mcard-header">
+          <div class="mcard-icon">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <div>
+            <h4 class="mcard-title">RM Padang Pesona Kapau</h4>
+            <p class="mcard-desc">
+              Jl. Tangkilan No.16, Tamanagung, Kec. Muntilan, Kab. Magelang 56413
+            </p>
+          </div>
+        </div>
+        <div class="mcard-footer">
+          <a href="https://maps.app.goo.gl/tJoHpj8N56SnJppR9" target="_blank" class="mcard-route-link">
+            <i class="fa-solid fa-map-pin"></i> Rute Maps
+          </a>
+          <span class="mcard-distance"><i class="fa-regular fa-clock"></i> Buka: 09.00–21.00</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CTA DELIVERY ===== -->
+  <section class="delivery-cta-section">
+    <div class="delivery-cta-container">
+      <div class="delivery-cta-left">
+        <h2>Ingin Menikmati Hidangan Kami di Rumah?</h2>
+        <p>
+          Pesan sekarang melalui WhatsApp atau aplikasi delivery favorit Anda. Kami menjamin kualitas rasa tetap terjaga
+          sampai di meja makan Anda.
+        </p>
+      </div>
+      <div class="delivery-cta-buttons">
+        <a href="https://wa.me/6281234567890" target="_blank" class="btn-delivery-wa">
+          <i class="fa-brands fa-whatsapp"></i> Pesan via WhatsApp
+        </a>
+        <a href="menu.html" class="btn-delivery-menu">
+          <i class="fa-regular fa-file-lines"></i> Lihat Menu Online
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="kontak-footer">
+    <div class="kfooter-container">
+
+      <div class="kfooter-col-brand">
+        <h4 class="kfooter-brand-title">RM Padang</h4>
+        <p class="kfooter-brand-desc">
+          Menyajikan kelezatan otentik masakan Padang dengan bahan pilihan terbaik sejak tahun 1990.
+        </p>
+        <div class="kfooter-social-icons">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="kfooter-col-links">
+        <h5 class="kfooter-section-title">TAUTAN CEPAT</h5>
+        <ul class="kfooter-links-list">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="menu.html">Menu Favorit</a></li>
+          <li><a href="catering.html">Layanan Catering</a></li>
+          <li><a href="tentang-kami.html">Tentang Kami</a></li>
+          <li><a href="#">Karir</a></li>
+        </ul>
+      </div>
+
+      <div class="kfooter-col-subscribe">
+        <h5 class="kfooter-section-title">BERLANGGANAN PROMO</h5>
+        <p class="kfooter-sub-text">
+          Dapatkan info menu baru dan promo spesial langsung di email Anda.
+        </p>
+        <form class="kfooter-sub-form" onsubmit="handleSubscribe(event)">
+          <input type="email" id="subscribeEmail" placeholder="Email Anda" required />
+          <button type="submit">OK</button>
+        </form>
+      </div>
+
+    </div>
+    <div class="kfooter-bottom">
+      <p>&copy; 2024 Rumah Makan Padang. Cipta Rasa Asli & Bahan Berkualitas.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+  <script>
+    function handleContactSubmit(event) {
+      event.preventDefault();
+      const nama = document.getElementById('namaLengkap').value.trim();
+      const contact = document.getElementById('emailWhatsApp').value.trim();
+      const subjek = document.getElementById('subjekPesan').value;
+      const pesan = document.getElementById('isiPesan').value.trim();
+
+      alert(`Terima kasih ${nama}!\nPesan Anda mengenai "${subjek}" telah terkirim.\nKami akan menghubungi Anda ke ${contact} sesegera mungkin.`);
+      document.getElementById('formKirimPesan').reset();
+    }
+
+    function handleSubscribe(event) {
+      event.preventDefault();
+      const email = document.getElementById('subscribeEmail').value.trim();
+      alert(`Terima kasih!\nEmail ${email} telah terdaftar untuk berlangganan promo.`);
+      document.getElementById('subscribeEmail').value = '';
+    }
+  </script>
+
+</body>
+
+</html>

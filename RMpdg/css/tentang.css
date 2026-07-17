@@ -1,0 +1,281 @@
+/* ===== BREADCRUMB ===== */
+.breadcrumb {
+  padding: 10px 32px;
+  font-size: 0.82rem;
+  color: var(--text-gray);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--light);
+  border-bottom: 1px solid #eee;
+}
+
+.breadcrumb a { color: var(--text-gray); }
+.breadcrumb a:hover { color: var(--primary); }
+.breadcrumb .sep { color: #aaa; }
+
+/* ===== HERO ===== */
+.tentang-hero {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.tentang-hero-content { flex: 1; }
+
+.tentang-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--secondary);
+  letter-spacing: 1.5px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.tentang-hero-content h1 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--primary);
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.tentang-hero-content p {
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  line-height: 1.7;
+  max-width: 420px;
+}
+
+.tentang-hero-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.tentang-hero-img img {
+  width: 100%;
+  max-width: 460px;
+  border-radius: 16px;
+  object-fit: cover;
+  max-height: 300px;
+  box-shadow: var(--shadow);
+}
+
+/* ===== VISI MISI ===== */
+.visi-misi {
+  background: var(--light);
+  padding: 48px 24px;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.vm-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 28px;
+  flex: 1;
+  max-width: 480px;
+  min-width: 260px;
+  box-shadow: var(--shadow);
+}
+
+.vm-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1.2rem;
+  margin-bottom: 14px;
+}
+
+.vm-card h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.vm-card p {
+  font-size: 0.85rem;
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+.vm-card ul {
+  list-style: disc;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.vm-card ul li {
+  font-size: 0.85rem;
+  color: var(--text-gray);
+  line-height: 1.5;
+}
+
+/* ===== STATISTIK ===== */
+.stats-section {
+  background: var(--primary);
+  padding: 40px 24px;
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+  color: var(--white);
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--secondary);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stat-label {
+  font-size: 0.82rem;
+  opacity: 0.85;
+}
+
+/* ===== TIM ===== */
+.tim-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.tim-section h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.tim-sub {
+  font-size: 0.88rem;
+  color: var(--text-gray);
+  margin-bottom: 32px;
+}
+
+.tim-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.tim-card {
+  background: var(--white);
+  border: 1.5px solid #eee;
+  border-radius: 12px;
+  padding: 24px 16px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.2s;
+}
+
+.tim-card:hover {
+  box-shadow: 0 6px 20px rgba(139,0,0,0.10);
+}
+
+.tim-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 12px;
+  border: 3px solid var(--primary);
+}
+
+.tim-card h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+
+.tim-card span {
+  font-size: 0.78rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* ===== KEUNGGULAN ===== */
+.keunggulan-section {
+  background: var(--light);
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.keunggulan-section h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 28px;
+}
+
+.keunggulan-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.keunggulan-item {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 24px 16px;
+  box-shadow: var(--shadow);
+}
+
+.keunggulan-item i {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.keunggulan-item h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.keunggulan-item p {
+  font-size: 0.8rem;
+  color: var(--text-gray);
+  line-height: 1.5;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .tentang-hero { flex-direction: column; }
+  .tim-grid { grid-template-columns: 1fr; max-width: 280px; }
+  .keunggulan-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-section { gap: 28px; }
+}
+
+@media (max-width: 480px) {
+  .keunggulan-grid { grid-template-columns: 1fr; }
+}

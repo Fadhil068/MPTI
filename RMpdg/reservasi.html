@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reservasi - RM Padang</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/reservasi.css"/>
+  <link rel="stylesheet" href="css/cart.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <img src="image/logo.png" alt="Logo" class="logo"/>
+      <div>
+        <span class="brand-name">RM PADANG</span>
+        <span class="brand-sub">Rumah Makan Padang</span>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">BERANDA</a></li>
+      <li><a href="menu.html">MENU</a></li>
+      <li><a href="catering.html">CATERING</a></li>
+      <li><a href="reservasi.html" class="active">RESERVASI</a></li>
+      <li><a href="promosi.html">PROMOSI</a></li>
+      <li><a href="tentang-kami.html">TENTANG KAMI</a></li>
+      <li><a href="kontak.html">KONTAK</a></li>
+    </ul>
+    <a href="login.html" class="btn-login">Login</a>
+    <button class="nav-toggle" id="navToggle"><i class="fa fa-bars"></i></button>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="index.html"><i class="fa fa-home"></i></a>
+    <span class="sep">&rsaquo;</span>
+    <span>Reservasi</span>
+  </div>
+
+  <!-- RESERVASI SECTION -->
+  <section class="reservasi-section">
+    <div class="reservasi-left">
+      <h1>Reservasi Meja</h1>
+      <p>Pesan meja Anda sekarang dan nikmati pengalaman makan yang menyenangkan bersama keluarga.</p>
+
+      <div class="info-box">
+        <div class="info-item">
+          <i class="fa fa-clock"></i>
+          <div>
+            <strong>Jam Operasional</strong>
+            <span>Setiap Hari 09.00 - 22.00 WIB</span>
+          </div>
+        </div>
+        <a href="https://maps.app.goo.gl/tJoHpj8N56SnJppR9" target="_blank" class="info-item" style="text-decoration: none; color: inherit;">
+          <i class="fa fa-map-marker-alt" style="color: var(--primary);"></i>
+          <div>
+            <strong>Lokasi</strong>
+            <span>Jl. Tangkilan No.16, Tamanagung, Kec. Muntilan, Kab. Magelang 56413</span>
+            <small style="display:block; color: var(--primary); font-weight: 600; margin-top: 2px;">↗ Buka di Google Maps</small>
+          </div>
+        </a>
+        <div class="info-item">
+          <i class="fa fa-phone"></i>
+          <div>
+            <strong>Telepon / WhatsApp</strong>
+            <span>+62 812-3456-7890</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fa fa-users"></i>
+          <div>
+            <strong>Kapasitas</strong>
+            <span>Tersedia untuk 2 - 50 orang</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reservasi-right">
+      <div class="form-card">
+        <h2>Form Reservasi</h2>
+        <p class="form-sub">Isi data di bawah ini untuk melakukan reservasi meja.</p>
+
+        <div class="form-group">
+          <label>Nama Lengkap <span class="req">*</span></label>
+          <input type="text" id="resNama" placeholder="Masukkan nama lengkap"/>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>No. WhatsApp / Telepon <span class="req">*</span></label>
+            <input type="text" id="resTelepon" placeholder="08xxxxxxxxxx"/>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="resEmail" placeholder="Masukkan email Anda"/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Tanggal Reservasi <span class="req">*</span></label>
+            <input type="date" id="resTanggal"/>
+          </div>
+          <div class="form-group">
+            <label>Jam Kedatangan <span class="req">*</span></label>
+            <select id="resJam">
+              <option value="">Pilih jam</option>
+              <option>09.00 WIB</option>
+              <option>10.00 WIB</option>
+              <option>11.00 WIB</option>
+              <option>12.00 WIB</option>
+              <option>13.00 WIB</option>
+              <option>14.00 WIB</option>
+              <option>15.00 WIB</option>
+              <option>16.00 WIB</option>
+              <option>17.00 WIB</option>
+              <option>18.00 WIB</option>
+              <option>19.00 WIB</option>
+              <option>20.00 WIB</option>
+              <option>21.00 WIB</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Jumlah Tamu <span class="req">*</span></label>
+            <input type="number" id="resTamu" placeholder="Contoh: 4" min="1" max="50"/>
+          </div>
+          <div class="form-group">
+            <label>Jenis Acara</label>
+            <select id="resAcara">
+              <option value="">Pilih jenis acara</option>
+              <option>Makan Biasa</option>
+              <option>Ulang Tahun</option>
+              <option>Pertemuan Bisnis</option>
+              <option>Arisan</option>
+              <option>Lainnya</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Catatan Tambahan</label>
+          <textarea id="resCatatan" placeholder="Tulis permintaan khusus atau catatan lainnya" rows="3"></textarea>
+        </div>
+
+        <button class="btn-submit" id="btnReservasi" onclick="submitReservasi()">
+          <i class="fa fa-calendar-check"></i> Buat Reservasi
+        </button>
+
+        <!-- Notifikasi sukses -->
+        <div id="resSuccess" style="display:none;margin-top:16px;background:#E8F8F0;border:1px solid #27AE60;
+             border-radius:8px;padding:14px 18px;color:#1a5c38;font-size:0.88rem;">
+          <i class="fa fa-check-circle" style="color:#27AE60;margin-right:8px;"></i>
+          <strong>Reservasi berhasil dikirim!</strong> Kami akan menghubungi Anda segera.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <img src="img/logo.png" alt="Logo" class="logo"/>
+        <div>
+          <span class="brand-name">RM PADANG</span>
+          <span class="brand-sub">Rumah Makan Padang</span>
+        </div>
+      </div>
+      <p class="footer-desc">Nikmati hidangan khas Minang dengan bumbu pilihan dan cita rasa autentik.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Halaman</h4>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="catering.html">Catering</a></li>
+        <li><a href="reservasi.html">Reservasi</a></li>
+        <li><a href="promosi.html">Promosi</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Kontak</h4>
+      <p><i class="fa fa-phone"></i> +62 812-3456-7890</p>
+      <p><i class="fa fa-envelope"></i> info@rmpadang.com</p>
+      <p><a href="https://maps.app.goo.gl/tJoHpj8N56SnJppR9" target="_blank" style="color: inherit; text-decoration: none;"><i class="fa fa-map-marker-alt"></i> Jl. Magelang - Yogyakarta Jl. Tangkilan No.16, Tangkilan, Tamanagung, Kec. Muntilan, Kabupaten Magelang, Jawa Tengah 56413</a></p>
+    </div>
+    <p class="footer-copy">© 2026 RM Padang. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/data.js"></script>
+  <script>
+    function submitReservasi() {
+      const nama    = document.getElementById('resNama').value.trim();
+      const telepon = document.getElementById('resTelepon').value.trim();
+      const tanggal = document.getElementById('resTanggal').value;
+      const jam     = document.getElementById('resJam').value;
+      const tamu    = document.getElementById('resTamu').value;
+      const acara   = document.getElementById('resAcara').value;
+      const catatan = document.getElementById('resCatatan').value.trim();
+
+      if (!nama || !telepon || !tanggal || !jam || !tamu) {
+        alert('Mohon lengkapi semua field yang wajib diisi (*).');
+        return;
+      }
+
+      // Format tanggal untuk tampilan
+      const tgl = new Date(tanggal);
+      const tglStr = tgl.toLocaleDateString('id-ID', { day: '2-digit', month: 'short', year: 'numeric' });
+
+      RMData.tambahReservasi({
+        nama, telepon, email: document.getElementById('resEmail').value.trim(),
+        tanggal: tglStr, jam,
+        tamu: tamu + ' orang',
+        acara: acara || 'Makan Biasa',
+        catatan
+      });
+
+      // Tampilkan notifikasi sukses
+      document.getElementById('resSuccess').style.display = 'block';
+      document.getElementById('btnReservasi').disabled = true;
+      document.getElementById('btnReservasi').style.opacity = '0.6';
+
+      // Reset form
+      setTimeout(() => {
+        ['resNama','resTelepon','resEmail','resTanggal','resCatatan'].forEach(id => {
+          document.getElementById(id).value = '';
+        });
+        document.getElementById('resJam').selectedIndex = 0;
+        document.getElementById('resAcara').selectedIndex = 0;
+        document.getElementById('resSuccess').style.display = 'none';
+        document.getElementById('btnReservasi').disabled = false;
+        document.getElementById('btnReservasi').style.opacity = '1';
+      }, 4000);
+    }
+  </script>
+</body>
+
+</html>

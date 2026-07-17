@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail Menu - RM Padang</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/menu.css" />
+  <link rel="stylesheet" href="css/menu-detail.css" />
+  <link rel="stylesheet" href="css/cart.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <img src="img/logo.png" alt="Logo" class="logo" />
+      <div>
+        <span class="brand-name">RM PADANG</span>
+        <span class="brand-sub">Rumah Makan Padang</span>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">BERANDA</a></li>
+      <li><a href="menu.html" class="active">MENU</a></li>
+      <li><a href="catering.html">CATERING</a></li>
+      <li><a href="reservasi.html">RESERVASI</a></li>
+      <li><a href="promosi.html">PROMOSI</a></li>
+      <li><a href="tentang-kami.html">TENTANG KAMI</a></li>
+      <li><a href="kontak.html">KONTAK</a></li>
+    </ul>
+    <a href="login.html" class="btn-login"><i class="fa fa-user"></i> Login</a>
+    <button class="nav-toggle" id="navToggle"><i class="fa fa-bars"></i></button>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="index.html"><i class="fa fa-home"></i></a>
+    <span class="sep">&rsaquo;</span>
+    <a href="menu.html">Menu</a>
+    <span class="sep">&rsaquo;</span>
+    <span>Rendang Daging</span>
+  </div>
+
+  <!-- DETAIL SECTION -->
+  <section class="detail-section">
+
+    <!-- KIRI: Gambar -->
+    <div class="detail-left">
+      <div class="detail-main-img">
+        <img src="img/071114000_1522751934-Resep-Rendang-Ayam-Kering.jpg" alt="Rendang Daging" id="mainImg" />
+      </div>
+      <div class="detail-thumbnails">
+        <img src="img/071114000_1522751934-Resep-Rendang-Ayam-Kering.jpg" alt="thumb1" class="thumb active"
+          onclick="changeImg(this)" />
+        <img src="img/30825f62038ff446435a521c0237f561.jpg" alt="thumb2" class="thumb" onclick="changeImg(this)" />
+        <img src="img/d3f1a9ad74bb9ce6050ae1f6ee87763a.jpg" alt="thumb3" class="thumb" onclick="changeImg(this)" />
+        <img src="img/ef425d5c417882455b49f2948c032384.jpg" alt="thumb4" class="thumb" onclick="changeImg(this)" />
+      </div>
+    </div>
+
+    <!-- KANAN: Info -->
+    <div class="detail-right">
+      <div class="detail-top-row">
+        <h1 class="detail-name">Rendang Daging</h1>
+        <span class="detail-price">Rp25.000</span>
+      </div>
+
+      <!-- Rating -->
+      <div class="detail-rating">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-half-alt"></i>
+        <span>(125 Ulasan)</span>
+      </div>
+
+      <p class="detail-desc">
+        Daging sapi pilihan dimasak perlahan dengan bumbu rempah-rempah khas Padang hingga empuk dan meresap sempurna.
+      </p>
+
+      <table class="detail-table">
+        <tr>
+          <td>Kategori</td>
+          <td><a href="menu.html" class="detail-cat">Makanan Utama</a></td>
+        </tr>
+        <tr>
+          <td>Tag</td>
+          <td>
+            <span class="tag-badge">Daging Sapi</span>
+            <span class="tag-badge">Pedas</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Tingkat Pedas</td>
+          <td class="pedas-row">
+            <i class="fa fa-pepper-hot"></i>
+            <i class="fa fa-pepper-hot"></i>
+            <i class="fa fa-pepper-hot"></i>
+            <i class="fa fa-pepper-hot"></i>
+            <i class="fa fa-pepper-hot low"></i>
+          </td>
+        </tr>
+        <tr>
+          <td>Berat Porsi</td>
+          <td>± 150 gram</td>
+        </tr>
+        <tr>
+          <td>Kalori</td>
+          <td>320 kkal</td>
+        </tr>
+      </table>
+
+      <!-- Jumlah & Keranjang -->
+      <div class="detail-order">
+        <div class="qty-control">
+          <span>Jumlah</span>
+          <div class="qty-btn-group">
+            <button onclick="changeQty(-1)">-</button>
+            <span id="qty">1</span>
+            <button onclick="changeQty(1)">+</button>
+          </div>
+        </div>
+        <button class="btn-keranjang" onclick="addToCart()">
+          <i class="fa fa-cart-shopping"></i> Tambah ke Keranjang
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU LAINNYA -->
+  <section class="menu-lainnya">
+    <h2>Menu Lainnya</h2>
+    <div class="lainnya-grid">
+
+      <a href="menu_detail.html?id=ayam-pop" class="lainnya-card">
+        <img src="img/451c3a2537616f5d5d06750972b5458e.jpg" alt="Ayam Pop" />
+        <h4>Ayam Pop</h4>
+        <span>Rp20.000</span>
+      </a>
+
+      <a href="menu_detail.html?id=dendeng-balado" class="lainnya-card">
+        <img src="img/ac649842c150745962b88a60234d9091.jpg" alt="Dendeng Balado" />
+        <h4>Dendeng Balado</h4>
+        <span>Rp28.000</span>
+      </a>
+
+      <a href="menu_detail.html?id=gulai-singkong" class="lainnya-card">
+        <img src="img/d3f1a9ad74bb9ce6050ae1f6ee87763a.jpg" alt="Gulai Daun Singkong" />
+        <h4>Gulai Daun Singkong</h4>
+        <span>Rp15.000</span>
+      </a>
+
+      <a href="menu_detail.html?id=gulai-ayam" class="lainnya-card">
+        <img src="img/ef425d5c417882455b49f2948c032384.jpg" alt="Gulai Ayam" />
+        <h4>Gulai Ayam</h4>
+        <span>Rp22.000</span>
+      </a>
+
+      <a href="menu_detail.html?id=es-jeruk" class="lainnya-card">
+        <img src="img/30825f62038ff446435a521c0237f561.jpg" alt="Es Jeruk" />
+        <h4>Es Jeruk</h4>
+        <span>Rp8.000</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <img src="img/logo.png" alt="Logo" class="logo" />
+        <div>
+          <span class="brand-name">RM PADANG</span>
+          <span class="brand-sub">Rumah Makan Padang</span>
+        </div>
+      </div>
+      <p class="footer-desc">Nikmati hidangan khas Minang dengan bumbu pilihan dan cita rasa autentik.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Halaman</h4>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="catering.html">Catering</a></li>
+        <li><a href="reservasi.html">Reservasi</a></li>
+        <li><a href="promosi.html">Promosi</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h4>Kontak</h4>
+      <p><i class="fa fa-phone"></i> +62 812-3456-7890</p>
+      <p><i class="fa fa-envelope"></i> info@rmpadang.com</p>
+      <p><a href="https://maps.app.goo.gl/tJoHpj8N56SnJppR9" target="_blank"
+          style="color: inherit; text-decoration: none;"><i class="fa fa-map-marker-alt"></i> Jl. Magelang - Yogyakarta
+          Jl. Tangkilan No.16, Tangkilan, Tamanagung, Kec. Muntilan, Kabupaten Magelang, Jawa Tengah 56413</a></p>
+    </div>
+    <p class="footer-copy">© 2026 RM Padang. All rights reserved.</p>
+  </footer>
+
+  <script src="js/menu-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+  <script>
+    function changeImg(el) {
+      document.getElementById('mainImg').src = el.src;
+      document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+      el.classList.add('active');
+    }
+
+    let qty = 1;
+    function changeQty(val) {
+      qty = Math.max(1, qty + val);
+      document.getElementById('qty').textContent = qty;
+    }
+
+    // Dynamic menu loading based on URL parameter
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const menuId = params.get('id') || 'rendang';
+      const menu = MENU_DATA[menuId] || MENU_DATA['rendang'];
+
+      // Update breadcrumb and page title
+      document.title = `${menu.nama} - Detail Menu - RM Padang`;
+      const breadcrumbCurrent = document.querySelector('.breadcrumb span:last-child');
+      if (breadcrumbCurrent) breadcrumbCurrent.textContent = menu.nama;
+
+      // Update main image and thumbnails
+      const mainImg = document.getElementById('mainImg');
+      if (mainImg) {
+        mainImg.src = menu.img;
+        mainImg.alt = menu.nama;
+      }
+      const thumbnailsContainer = document.querySelector('.detail-thumbnails');
+      if (thumbnailsContainer && menu.thumbnails) {
+        thumbnailsContainer.innerHTML = menu.thumbnails.map((thumb, idx) => `
+          <img src="${thumb}" alt="thumb${idx + 1}" class="thumb ${idx === 0 ? 'active' : ''}" onclick="changeImg(this)" />
+        `).join('');
+      }
+
+      // Update info
+      const nameEl = document.querySelector('.detail-name');
+      if (nameEl) nameEl.textContent = menu.nama;
+
+      const priceEl = document.querySelector('.detail-price');
+      if (priceEl) priceEl.textContent = `Rp${menu.harga.toLocaleString('id-ID')}`;
+
+      const descEl = document.querySelector('.detail-desc');
+      if (descEl) descEl.textContent = menu.deskripsi;
+
+      // Rating
+      const ratingContainer = document.querySelector('.detail-rating');
+      if (ratingContainer) {
+        let starsHtml = '';
+        const fullStars = Math.floor(menu.rating);
+        const hasHalf = menu.rating % 1 !== 0;
+        for (let i = 0; i < 5; i++) {
+          if (i < fullStars) {
+            starsHtml += '<i class="fa fa-star"></i>';
+          } else if (i === fullStars && hasHalf) {
+            starsHtml += '<i class="fa fa-star-half-alt"></i>';
+          } else {
+            starsHtml += '<i class="fa-regular fa-star" style="color: var(--secondary)"></i>';
+          }
+        }
+        starsHtml += `<span>(${menu.ulasan} Ulasan)</span>`;
+        ratingContainer.innerHTML = starsHtml;
+      }
+
+      // Table specs
+      const tableRows = document.querySelectorAll('.detail-table tr');
+      if (tableRows.length >= 5) {
+        tableRows[0].querySelector('td:last-child').innerHTML = `<a href="menu.html" class="detail-cat">${menu.kategori}</a>`;
+        tableRows[1].querySelector('td:last-child').innerHTML = menu.tags.map(tag => `<span class="tag-badge">${tag}</span>`).join('');
+        
+        let pedasHtml = '';
+        for (let i = 0; i < 5; i++) {
+          pedasHtml += `<i class="fa fa-pepper-hot ${i < menu.pedas ? '' : 'low'}"></i>`;
+        }
+        tableRows[2].querySelector('td:last-child').innerHTML = pedasHtml;
+        tableRows[3].querySelector('td:last-child').textContent = menu.berat;
+        tableRows[4].querySelector('td:last-child').textContent = menu.kalori;
+      }
+
+      // Bind local window menu variable for Cart submission
+      window.currentMenu = menu;
+    });
+
+    function addToCart() {
+      const menu = window.currentMenu || MENU_DATA['rendang'];
+      if (window.CartSystem) {
+        window.CartSystem.addItem({
+          id: menu.id,
+          nama: menu.nama,
+          harga: menu.harga,
+          img: menu.img,
+          qty: qty
+        });
+      } else {
+        alert(`${qty} porsi ${menu.nama} ditambahkan ke keranjang!`);
+      }
+    }
+  </script>
+</body>
+
+</html>
